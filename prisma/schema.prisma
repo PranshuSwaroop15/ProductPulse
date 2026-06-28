@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Organization {
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+
+  feedback  FeedbackItem[]
+  insights  Insight[]
+}
+
+model FeedbackItem {
+  id             String   @id @default(cuid())
+  organizationId String
+  source         String
+  customerName   String?
+  feedbackText   String
+  sentiment      String?
+  category       String?
+  priority       String?
+  summary        String?
+  createdAt      DateTime @default(now())
+  suggestedAction String?
+  businessImpact  String?
+  confidence      Float?
+  modelUsed       String?
+  organization Organization @relation(fields: [organizationId], references: [id])
+}
+
+model Insight {
+  id             String   @id @default(cuid())
+  organizationId String
+  title          String
+  summary        String
+  insightType    String
+  severity       String
+  createdAt      DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+}
