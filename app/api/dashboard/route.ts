@@ -2,7 +2,24 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
 export async function GET() {
-  const feedback = await prisma.feedbackItem.findMany({
+  type FeedbackItem = {
+  id: string
+  organizationId: string
+  feedbackText: string
+  customerName: string | null
+  source: string | null
+  sentiment: string | null
+  category: string | null
+  priority: string | null
+  summary: string | null
+  suggestedAction?: string | null
+  businessImpact?: string | null
+  confidence?: number | null
+  modelUsed?: string | null
+  createdAt: Date
+  }
+  // const feedback = await prisma.feedbackItem.findMany({
+  const feedback: FeedbackItem[] = await prisma.feedbackItem.findMany({
     where: {
       organizationId: "demo-org",
     },
