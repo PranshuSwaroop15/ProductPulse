@@ -1,16 +1,25 @@
-import { ExecutiveReport } from "../../components/dashboard/executive-report"
+// import { ExecutiveReport } from "../../components/dashboard/executive-report"
+// import { getDashboardData } from "@/lib/get-dashboard-data"
 
-async function getDashboardData() {
-  const res = await fetch("http://localhost:3000/api/dashboard", {
-    cache: "no-store",
-  })
+// async function getDashboardData() {
+//   const res = await fetch("http://localhost:3000/api/dashboard", {
+//     cache: "no-store",
+//   })
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch dashboard data")
-  }
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch dashboard data")
+//   }
 
-  return res.json()
-}
+//   return res.json()
+// }
+
+// export default async function ReportPage() {
+//   const data = await getDashboardData()
+
+//   return <ExecutiveReport data={data} />
+// }
+import { ExecutiveReport } from "@/components/dashboard/executive-report"
+import { getDashboardData } from "@/lib/get-dashboard-data";
 
 export default async function ReportPage() {
   const data = await getDashboardData()

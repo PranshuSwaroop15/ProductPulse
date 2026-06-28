@@ -58,25 +58,25 @@ import { FeatureRequests } from "@/components/dashboard/feature-requests"
 import { FeedbackUpload } from "@/components/dashboard/feedback-upload"
 import { AiSummary } from "@/components/dashboard/ai-summary"
 import { RecentFeedback } from "@/components/dashboard/recent-feedback"
+import { getDashboardData } from "@/lib/get-dashboard-data";
+// async function getDashboardData() {
+//   // const res = await fetch("http://localhost:3000/api/dashboard", {
+//   //   cache: "no-store",
+//   // })
+//   const baseUrl =
+//   process.env.NEXT_PUBLIC_SITE_URL ||
+//   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
 
-async function getDashboardData() {
-  // const res = await fetch("http://localhost:3000/api/dashboard", {
-  //   cache: "no-store",
-  // })
-  const baseUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+//   const res = await fetch(`${baseUrl}/api/dashboard`, {
+//     cache: "no-store",
+//   })
 
-  const res = await fetch(`${baseUrl}/api/dashboard`, {
-    cache: "no-store",
-  })
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch dashboard data")
+//   }
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch dashboard data")
-  }
-
-  return res.json()
-}
+//   return res.json()
+// }
 
 export default async function DashboardPage() {
   const data = await getDashboardData()
