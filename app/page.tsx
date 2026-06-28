@@ -28,23 +28,6 @@ export default async function DashboardPage() {
               </p>
             </div>
           </div>
-
-          {/* <div className="flex flex-col gap-6">
-            <KpiCards data={data} />
-
-            <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
-              <div className="xl:col-span-2">
-                <SentimentChart data={data} />
-              </div>
-              <AiSummary data={data} />
-            </div>
-
-            <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
-              <TopComplaints data={data} />
-              <FeatureRequests data={data} />
-              <FeedbackUpload />
-            </div>
-          </div> */}
           <div className="flex flex-col gap-6">
           <KpiCards data={data} />
 
