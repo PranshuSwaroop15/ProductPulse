@@ -60,7 +60,14 @@ import { AiSummary } from "@/components/dashboard/ai-summary"
 import { RecentFeedback } from "@/components/dashboard/recent-feedback"
 
 async function getDashboardData() {
-  const res = await fetch("http://localhost:3000/api/dashboard", {
+  // const res = await fetch("http://localhost:3000/api/dashboard", {
+  //   cache: "no-store",
+  // })
+  const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+
+  const res = await fetch(`${baseUrl}/api/dashboard`, {
     cache: "no-store",
   })
 
