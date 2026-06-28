@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"
+
 import { ExecutiveReport } from "@/components/dashboard/executive-report"
 import { getDashboardData } from "@/lib/get-dashboard-data";
 
