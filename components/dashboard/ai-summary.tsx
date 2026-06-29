@@ -184,6 +184,7 @@ type Feedback = {
 type DashboardData = {
   total: number
   recentFeedback: Feedback[]
+  insights: string[]
 }
 
 type Props = {
@@ -206,29 +207,64 @@ export function AiSummary({ data }: Props) {
       ? `${Math.round(latest.confidence * 100)}% confidence`
       : "Rule-based fallback"
 
-  const highlights = [
-    {
-      icon: Sparkles,
-      tone: "neutral" as const,
-      text:
-        latest?.summary ||
-        "Upload feedback to generate AI-powered product insights.",
-    },
-    {
-      icon: AlertTriangle,
-      tone: "warning" as const,
-      text:
-        latest?.suggestedAction ||
-        "Suggested actions will appear after feedback is analyzed.",
-    },
-    {
-      icon: TrendingUp,
-      tone: "positive" as const,
-      text:
-        latest?.businessImpact ||
-        `Generated from ${data.total} feedback items stored in Aurora PostgreSQL.`,
-    },
-  ]
+  // const highlights = [
+  //   {
+  //     icon: Sparkles,
+  //     tone: "neutral" as const,
+  //     text:
+  //       latest?.summary ||
+  //       "Upload feedback to generate AI-powered product insights.",
+  //   },
+  //   {
+  //     icon: AlertTriangle,
+  //     tone: "warning" as const,
+  //     text:
+  //       latest?.suggestedAction ||
+  //       "Suggested actions will appear after feedback is analyzed.",
+  //   },
+  //   {
+  //     icon: TrendingUp,
+  //     tone: "positive" as const,
+  //     text:
+  //       latest?.businessImpact ||
+  //       `Generated from ${data.total} feedback items stored in Aurora PostgreSQL.`,
+  //   },
+  // ]
+
+  const highlights = data.insights?.length
+  ? data.insights.map((insight, index) => ({
+      icon: index === 0 ? Sparkles : index === 1 ? AlertTriangle : TrendingUp,
+      tone:
+        index === 1
+          ? ("warning" as const)
+          : index === 2
+          ? ("positive" as const)
+          : ("neutral" as const),
+      text: insight,
+    }))
+  : [
+      {
+        icon: Sparkles,
+        tone: "neutral" as const,
+        text:
+          latest?.summary ||
+          "Upload feedback to generate AI-powered product insights.",
+      },
+      {
+        icon: AlertTriangle,
+        tone: "warning" as const,
+        text:
+          latest?.suggestedAction ||
+          "Suggested actions will appear after feedback is analyzed.",
+      },
+      {
+        icon: TrendingUp,
+        tone: "positive" as const,
+        text:
+          latest?.businessImpact ||
+          `Generated from ${data.total} feedback items stored in Aurora PostgreSQL.`,
+      },
+    ]
 
   return (
     <section className="flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm">
