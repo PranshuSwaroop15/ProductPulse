@@ -1,36 +1,237 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 ProductPulse
 
-## Getting Started
+> AI-powered customer feedback intelligence platform built with Next.js, OpenAI, Prisma, and Amazon Aurora PostgreSQL.
 
-First, run the development server:
+![ProductPulse](./public/icon.png)
+
+## 📖 Overview
+
+ProductPulse helps businesses transform raw customer feedback into actionable business intelligence.
+
+Instead of manually reading hundreds of customer reviews, survey responses, and support tickets, ProductPulse automatically analyzes feedback using AI and provides executives with meaningful insights through an interactive dashboard.
+
+The application supports both manual feedback submission and CSV uploads, performs AI-powered analysis, stores results in Amazon Aurora PostgreSQL, and generates real-time analytics and executive reports.
+
+---
+
+# ✨ Features
+
+- 🤖 AI-powered feedback analysis
+- 😊 Sentiment Analysis (Positive / Neutral / Negative)
+- 🏷 Automatic Category Classification
+- 🚨 Priority Detection
+- 📝 AI-generated Executive Summaries
+- 💡 Suggested Business Actions
+- 📈 Interactive Analytics Dashboard
+- 📊 Sentiment Trend Visualization
+- 📂 CSV Bulk Import
+- 📄 Executive Report Generation
+- ⚡ Real-time Dashboard Updates
+
+---
+
+# 🏗 Architecture
+
+```
+                        User
+                          │
+                          ▼
+                Next.js Frontend (Vercel)
+                          │
+                 HTTPS REST API Calls
+                          │
+                          ▼
+            Next.js API Routes (Serverless)
+                          │
+                     Prisma ORM
+                  ┌────────┴─────────┐
+                  ▼                  ▼
+        OpenAI GPT-4o-mini    Amazon Aurora PostgreSQL
+     AI Analysis Pipeline        Persistent Storage
+                  │                  │
+                  └────────┬─────────┘
+                           ▼
+            Dashboard & Executive Reports
+```
+
+---
+
+# 🛠 Tech Stack
+
+### Frontend
+
+- Next.js 15
+- React
+- TypeScript
+- Tailwind CSS
+- Recharts
+- shadcn/ui
+
+### Backend
+
+- Next.js API Routes
+- Prisma ORM
+
+### AI
+
+- OpenAI GPT-4o-mini
+
+### Database
+
+- Amazon Aurora PostgreSQL
+
+### Deployment
+
+- Vercel
+
+---
+
+# 🧠 AI Analysis Pipeline
+
+Each customer feedback is automatically analyzed to determine:
+
+- Sentiment
+- Category
+- Priority
+- Executive Summary
+- Suggested Action
+- Business Impact
+
+The analyzed data is then stored inside Amazon Aurora PostgreSQL and visualized on the dashboard.
+
+---
+
+# 📊 Dashboard
+
+The dashboard includes:
+
+- Total Feedback
+- Positive / Neutral / Negative Distribution
+- High Priority Issues
+- Sentiment Trends
+- Top Complaints
+- Feature Requests
+- Recent Feedback
+- AI Executive Insights
+
+---
+
+# 📄 Executive Report
+
+Executives receive:
+
+- Overall Product Health Score
+- Customer Sentiment Breakdown
+- Business Risks
+- AI Generated Recommendations
+- Executive Summary
+
+---
+
+# 🗄 AWS Database
+
+This project uses:
+
+**Amazon Aurora PostgreSQL**
+
+Aurora stores:
+
+- Customer Feedback
+- AI Analysis Results
+- Categories
+- Priorities
+- Executive Summaries
+- Suggested Actions
+- Metadata
+
+Prisma ORM is used as the database access layer.
+
+---
+
+# 🚀 Running Locally
+
+Clone the repository
+
+```bash
+git clone https://github.com/PranshuSwaroop15/ProductPulse.git
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Create an `.env` file
+
+```env
+DATABASE_URL=your_aurora_connection_string
+OPENAI_API_KEY=your_openai_key
+```
+
+Run Prisma
+
+```bash
+npx prisma generate
+```
+
+Start the application
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 📂 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+components/
+lib/
+prisma/
+public/
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+# 🎯 Problem Statement
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Organizations receive thousands of customer feedback entries every day.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Manually reviewing every review, support ticket, or survey response is expensive and slow.
 
-## Deploy on Vercel
+ProductPulse uses AI to automatically analyze customer feedback, identify trends, prioritize issues, and generate executive insights, helping businesses make faster and more informed product decisions.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 🌟 Future Improvements
+
+- Authentication & Multi-tenancy
+- Real-time Streaming Analytics
+- Background AI Processing Queue
+- PDF Report Export
+- Email Reports
+- Slack & Microsoft Teams Integrations
+- Multi-language Sentiment Analysis
+
+---
+
+# 👨‍💻 Author
+
+**Pranshu Swaroop**
+
+Boston University  
+M.S. Computer Science
+
+GitHub:
+https://github.com/PranshuSwaroop15
+
+LinkedIn:
+https://linkedin.com/in/pranshuswaroop
+
+---
+
+# 📜 License
+
+MIT License
