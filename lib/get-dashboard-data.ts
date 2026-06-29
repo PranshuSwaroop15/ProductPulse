@@ -1,15 +1,7 @@
 import { prisma } from "@/lib/prisma";
 
 export async function getDashboardData() {
-  // const feedback = await prisma.feedbackItem.findMany({
-  //   where: {
-  //     organizationId: "demo-org",
-  //   },
-  //   orderBy: {
-  //     createdAt: "desc",
-  //   },
-  // });
-
+  
   const feedback = await prisma.feedbackItem.findMany({
   where: {
     organizationId: "demo-org",
