@@ -280,13 +280,18 @@ export function ExecutiveReport({ data }: Props) {
               Executive Report
             </h1>
           </div>
-          <Link href="/">
-            <Button variant="outline">Back to Dashboard</Button>
-          </Link>
-          <Button onClick={() => window.print()} className="gap-2">
-            <Download className="h-4 w-4" />
-            Download PDF
-          </Button>
+          <div className="flex items-center gap-3">
+              <Link href="/">
+                <Button variant="outline">
+                  Back to Dashboard
+                </Button>
+              </Link>
+
+              <Button onClick={() => window.print()} className="gap-2">
+                <Download className="h-4 w-4" />
+                Download PDF
+              </Button>
+            </div>
         </div>
 
         <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm print:border-none print:shadow-none">
