@@ -10,26 +10,14 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'ProductPulse — Customer Feedback Intelligence',
+  title: 'ProductPulse | AI Customer Intelligence',
   description:
-    'AI-powered customer feedback intelligence platform. Surface sentiment, top complaints, and feature requests in one place.',
+    'AI-powered customer feedback analytics and executive reporting.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  icon: "/icon.png",
+  shortcut: "/icon.png",
+  apple: "/icon.png",
   },
 }
 

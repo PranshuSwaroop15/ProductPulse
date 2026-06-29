@@ -23,10 +23,10 @@ export default async function DashboardPage() {
           <div className="mb-6 flex flex-wrap items-end justify-between gap-2">
             <div>
               <h1 className="text-xl font-semibold tracking-tight text-foreground md:text-2xl">
-                Feedback overview
+                ProductPulse Dashboard
               </h1>
               <p className="mt-1 text-sm text-muted-foreground">
-                What your customers are telling you, distilled by AI.
+                AI-powered customer intelligence from live Aurora PostgreSQL feedback.
               </p>
             </div>
           </div>

@@ -11,6 +11,7 @@ import {
   Settings,
   LifeBuoy,
   Waves,
+  Activity,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -33,8 +34,8 @@ export function Sidebar() {
   return (
     <aside className="hidden w-64 shrink-0 flex-col border-r border-sidebar-border bg-sidebar lg:flex">
       <div className="flex h-16 items-center gap-2.5 border-b border-sidebar-border px-6">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-          <Waves className="h-5 w-5" />
+        <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+          <Activity className="h-5 w-5" />
         </div>
         <span className="text-base font-semibold tracking-tight text-sidebar-foreground">
           ProductPulse
