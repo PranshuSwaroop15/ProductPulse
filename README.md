@@ -2,7 +2,8 @@
 
 > AI-powered customer feedback intelligence platform built with Next.js, OpenAI, Prisma, and Amazon Aurora PostgreSQL.
 
-![ProductPulse](./public/icon.png)
+![ProductPulse](<img width="1254" height="1254" alt="icon" src="https://github.com/user-attachments/assets/58e4e477-557a-4aee-b583-d84fd509f644" />
+)
 
 ## 📖 Overview
 
