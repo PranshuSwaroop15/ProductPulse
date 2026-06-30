@@ -2,7 +2,6 @@
 
 > AI-powered customer feedback intelligence platform built with Next.js, OpenAI, Prisma, and Amazon Aurora PostgreSQL.
 
-
 ## 📖 Overview
 
 ProductPulse helps businesses transform raw customer feedback into actionable business intelligence.
