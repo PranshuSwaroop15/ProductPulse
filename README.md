@@ -31,7 +31,7 @@ The application supports both manual feedback submission and CSV uploads, perfor
 
 ---
 
-# 🏗 Architecture
+# 🏗 Architecture [Link](https://miro.com/app/board/uXjVHA_e4T8=/?share_link_id=243283777624)
 
 ```
                         User
@@ -221,9 +221,6 @@ ProductPulse uses AI to automatically analyze customer feedback, identify trends
 # 👨‍💻 Author
 
 **Pranshu Swaroop**
-
-Boston University  
-M.S. Computer Science
 
 GitHub:
 https://github.com/PranshuSwaroop15
