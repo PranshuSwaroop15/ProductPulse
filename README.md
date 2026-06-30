@@ -2,8 +2,6 @@
 
 > AI-powered customer feedback intelligence platform built with Next.js, OpenAI, Prisma, and Amazon Aurora PostgreSQL.
 
-![ProductPulse](<img width="1254" height="1254" alt="icon" src="https://github.com/user-attachments/assets/58e4e477-557a-4aee-b583-d84fd509f644" />
-)
 
 ## 📖 Overview
 
@@ -115,6 +113,9 @@ The dashboard includes:
 - Recent Feedback
 - AI Executive Insights
 
+<img width="1912" height="1018" alt="Screenshot 2026-06-29 165928" src="https://github.com/user-attachments/assets/904470ab-e422-4959-a35a-5cf5ae67b960" />
+<img width="1585" height="550" alt="Screenshot 2026-06-29 193218" src="https://github.com/user-attachments/assets/8aa561a8-d323-4503-bffc-74b05f85db97" />
+<img width="1910" height="1027" alt="Screenshot 2026-06-29 193235" src="https://github.com/user-attachments/assets/ca29c294-aff6-4c99-a23c-172b0d2a606b" />
 ---
 
 # 📄 Executive Report
@@ -126,6 +127,8 @@ Executives receive:
 - Business Risks
 - AI Generated Recommendations
 - Executive Summary
+- 
+<img width="1918" height="855" alt="Screenshot 2026-06-29 193255" src="https://github.com/user-attachments/assets/8d238834-dd56-46ba-9f80-5d0fd097a229" />
 
 ---
 
@@ -146,6 +149,8 @@ Aurora stores:
 - Metadata
 
 Prisma ORM is used as the database access layer.
+
+<img width="1918" height="1007" alt="Screenshot 2026-06-29 194535" src="https://github.com/user-attachments/assets/286eb2d1-7488-4cba-9490-0a5f449f00c9" />
 
 ---
 
