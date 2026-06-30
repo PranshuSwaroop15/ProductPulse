@@ -230,7 +230,7 @@ GitHub:
 https://github.com/PranshuSwaroop15
 
 LinkedIn:
-https://linkedin.com/in/pranshuswaroop
+https://www.linkedin.com/in/pranshuswaroop15/
 
 ---
 
